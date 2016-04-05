@@ -51,32 +51,32 @@ table {
 
 body {
 	font-size:62.5%;
-	font-family: 'HelveticaNeueUltraLight', sans-serif;
+	font-family: 'HelveticaNeue-UltraLight', sans-serif;
 	color:#FFF;
 	text-transform: lowercase;
 }
 h1 {
 	font-size:7em;
 	padding:1.7em 0 0 0;
-	font-family: 'HelveticaNeueUltraLight', sans-serif;
+	font-family: 'HelveticaNeue-UltraLight', sans-serif;
 	text-transform: lowercase;
 }
 h2 {
 	font-size:6em;
 	padding:0.5em 0 0.5em 0;
-	font-family: 'HelveticaNeueUltraLight', sans-serif;
+	font-family: 'HelveticaNeue-UltraLight', sans-serif;
 	text-transform: lowercase;
 }
 h3 {
 	font-size:2.3em;
-	font-family: 'HelveticaNeueUltraLight', sans-serif;
+	font-family: 'HelveticaNeue-UltraLight', sans-serif;
 	text-transform: lowercase;
 }
 
 p {
 	font-size:1.9em;
 	padding:0.4em 0 0.4em 0;
-	font-family: 'HelveticaNeueUltraLight', sans-serif;
+	font-family: 'HelveticaNeue-UltraLight', sans-serif;
 	text-transform: lowercase;
 }
 a:link,
@@ -214,8 +214,8 @@ pre {
 }
 
 @font-face {
-  font-family: 'HelveticaNeueUltraLight';
+  font-family: 'HelveticaNeue-UltraLight';
   src: url('/public/fonts/HelveticaNeue-UltraLight.eot');
   src: url('/public/fonts/HelveticaNeue-UltraLight.eot?#iefix') format('embedded-opentype'), url('/public/fonts/HelveticaNeue-UltraLight.woff') format('woff'), url('/public/fonts/HelveticaNeue-UltraLight.ttf') format('truetype'), url('/public/fonts/HelveticaNeue-UltraLight.svg#HelveticaNeueUltraLight') format('svg');
   font-style: normal;
-  font-weight: normal; }
+  font-weight: 100; }
