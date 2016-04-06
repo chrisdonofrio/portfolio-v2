@@ -6,7 +6,9 @@ var PORT = process.env.PORT || 3000;
 var smtpTransport = nodemailer.createTransport("SMTP",{
     service: "Gmail",
     auth: {
-  // auth here
+        user: "",
+        pass: ""
+    }
 });
 
 app.use(express.static(__dirname + '/public'));
