@@ -209,12 +209,11 @@ header {
 }
 
 .inner-content:hover { 
-	font-size: 13px;
 	background: rgba(255,215,0,0.7);
-	color: rgba(0,0,0,0.7);
+	color: rgba(0,0,0,0.9);
 	border-radius: 25px;
 	border-style: solid;
-	border-width: medium;
+	border-width: 2px;
 	border-color: rgba(255,255,255, 1);
 }
 
