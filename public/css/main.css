@@ -82,12 +82,33 @@ h3 {
 
 p {
 	font-size:1.9em;
-	padding:0.4em 0 0.4em 0;
+	/*padding:0.4em 0 0.4em 0;*/
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 100;
 	text-transform: lowercase;
 	-webkit-font-smoothing:antialiased
 }
+
+#skills-list {
+	margin: 0 auto;
+	font-size:1.5em;
+	/*padding:0.4em 0 0.4em 0;*/
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 100;
+	list-style: none;
+	text-align: left;
+	width: 70%;
+}
+
+small {
+	font-size: 0.4em;
+}
+
+#skills-list-small {
+	font-size: 0.7em;
+	text-indent: 5%;
+}
+
 a:link,
 a:visited {
 	color:#FFF;
@@ -182,11 +203,14 @@ header {
 
 
 }
-.philosophy {
+.skills {
 	background: #666666;
 }
-.projects {
+.philosophy {
 	background: #999999;
+}
+.projects {
+	background: #b2b2b2;
 
 }
 .contact {
@@ -202,19 +226,10 @@ header {
 
     margin: auto;
     width: 50%;
-    padding: 25px;
-    padding: 10px;
+    padding: 35px;
     text-align: center;
     margin-top: 5%;
-}
-
-.inner-content:hover { 
-	background: rgba(255,215,0,0.7);
-	color: rgba(0,0,0,0.9);
-	border-radius: 25px;
-	border-style: solid;
-	border-width: 2px;
-	border-color: rgba(255,255,255, 1);
+    font-size: 1.7em;
 }
 
 pre {
@@ -256,3 +271,45 @@ pre {
   src: url('/public/fonts/HelveticaNeue-UltraLight.eot?#iefix') format('embedded-opentype'), url('/public/fonts/HelveticaNeue-UltraLight.woff') format('woff'), url('/public/fonts/HelveticaNeue-UltraLight.ttf') format('truetype'), url('/public/fonts/HelveticaNeue-UltraLight.svg#HelveticaNeueUltraLight') format('svg');
   font-style: normal;
   font-weight: 100; }
+
+/*  iPhone 5 & 6*/
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) {
+	.inner-content {
+		width: 95%;
+		font-size: 1.3em;
+		padding: 0;
+		text-align: left;
+	}
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) {
+	.inner-content {
+		width: 95%;
+		font-size: 1.3em;
+		padding: 0;
+		text-align: left;
+	}
+
+	.scroll {
+		margin-left: 20%;
+	}
+}
+
+/*media queries*/
+
+@media only screen 
+and (min-width : 801px) {
+	.inner-content:hover { 
+		background: rgba(255,215,0,0.7);
+		color: rgba(0,0,0,1);
+		border-radius: 25px;
+		border-style: solid;
+		border-width: 2px;
+		border-color: rgba(255,255,255, 1);
+	}
+}
