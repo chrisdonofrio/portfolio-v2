@@ -23,9 +23,9 @@
 				<h1>Chris Donofrio.</h1>
 					<p class="tagline">Web Maestro | Audiophile | Databender</p>
 			</header>
-				<p><i class="fa fa-github"></i><i class="fa fa-linkedin"></i><i class="fa fa-twitter"></i> <i class="fa fa-soundcloud"></i></p>
-				<a href="#overview" class="scroll">Scroll for more</a>
-				<a href="http://twitter.com/#" target="_blank" class="twitter"><img src="images/chrisdonofrio.jpg" width="100" height="100" alt="Twitter pic"></a>
+				<p><a href="http://github.com/chrisdonofrio" <i class="fa fa-github"></i></a><a href="http://linkedin.com/in/crdonofrio"<i class="fa fa-linkedin"></i></a><a href="mailto:cdonofrio20@gmail.com"<i class="fa fa-envelope" aria-hidden="true"></i></a><a href="https://soundcloud.com/chris_donofrio/tracks"<i class="fa fa-soundcloud"></i></a></p>
+				<a href="#overview" class="scroll" id="scroll-text">Scroll for more</a>
+				<a href="http://twitter.com/chris_donofrio" target="_blank" class="twitter"><img src="images/chrisdonofrio.jpg" width="75" height="75" alt="Twitter pic"> <span id="tweet-me">tweet me! @chris_donofrio</span></a>
 			</div>
 		</section>
 		<section class="panel about" data-section-name="about">
@@ -33,11 +33,11 @@
 				<h2>About Me.</h2>
 				<div class="inner-content">
 					<p>
-					Hi! My name is Chris Donofrio. I'm an NYC-based web developer and recent graduate of Rutgers Coding Bootcamp.
+					Hi! My name is Chris Donofrio. I'm a web developer based in NYC and recent graduate of Rutgers Coding Bootcamp.
 					</p>
 					<br>
 					<p>
-					Besides creating awesome digital experiences, I'm a music enthusiast with a soft spot for synthesizers. <small>and I don't send read receipts.</small>
+					When I'm not writing killer code, I like to geek out about synthesizers, glitch art, and good texting etiquette. <small>(I <i>don't</i> send read receipts.)</small>
 					</p>
 				</div>
 			</div>
@@ -75,7 +75,7 @@
 				<h2>Philosophy.</h2>
 				<div class="inner-content">
 					<p>
-					Virtual space should be engaging, intuitive, and aesthetic. As a web conductor, I direct all the moving parts of a web ensemble into perfect harmony.
+					Virtual space should be engaging, intuitive, and aesthetic. As a web conductor, I strive to direct all the moving parts of a web ensemble into perfect harmony.
 					</p>
 				</div>
 			</div>
@@ -93,12 +93,16 @@
 			<div class="inner">
 				<h2>Hit Me Up!</h2>
 				<div>
-					<input id="from" type="text" placeholder="Enter email" />
-					<input id="subject" type="text" placeholder="Enter subject" />
-					<textarea id="content" cols="40" rows="5" placeholder="Leave a message"></textarea>
-					<button id="send_email">send!</button>
-					<span id="message"></span>
-					</div>
+					<form action="/send" method="post">
+						<p>
+							<input id="name" name="name" class="form-control" type="text" placeholder="Enter name" />
+							<input id="email" name="email" class="form-control" type="email" placeholder="Enter email" />
+							<textarea id="message" name="message" class="form-control" cols="40" rows="5" placeholder="Leave a message"></textarea>
+							<button type="submit" id="send-email">send!</button>
+							<span id="status-message"></span>
+						</p>
+					</form>
+				</div>
 			</div>
 		</section>
 

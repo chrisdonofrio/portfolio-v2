@@ -111,13 +111,13 @@ small {
 
 a:link,
 a:visited {
-	color:#FFF;
+	color:gold;
 	text-decoration:none;
 }
 a:hover,
 a:focus,
 a:active {
-	text-decoration:underline;
+	color: #FFF;
 }
 a.twitter:link,
 a.twitter:visited {
@@ -137,6 +137,10 @@ a.twitter img {
 a.twitter span {
 	padding:0 0 0 0.6em;
 }
+
+#tweet-me {
+		font-family:'Source Sans Pro', sans-serif;
+}
 header {
 	padding-bottom:5em;
 }
@@ -146,6 +150,11 @@ header {
 	margin-top:6em;
 	display:inline-block;
 
+}
+
+#scroll-text {
+		font-family:'Source Sans Pro', sans-serif;
+		text-transform: lowercase;
 }
 .scroll:hover {
 	text-decoration:none;
@@ -184,6 +193,7 @@ header {
 }
 .fa-github,
 .fa-linkedin,
+.fa-envelope,
 .fa-twitter,
 .fa-soundcloud {
 	padding: 10px;
@@ -297,6 +307,10 @@ and (max-device-width : 568px) {
 
 	.scroll {
 		margin-left: 20%;
+		margin-bottom: 80%;
+	}
+	.twitter {
+		margin-top: 20%;
 	}
 }
 

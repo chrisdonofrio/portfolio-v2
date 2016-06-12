@@ -1,15 +1,14 @@
 var express = require('express');
 var app = express();
+var bodyParser = require("body-parser");
 var nodemailer = require("nodemailer");
+var mg = require('nodemailer-mailgun-transport');
 var PORT = process.env.PORT || 3000;
 
-var smtpTransport = nodemailer.createTransport("SMTP",{
-    service: "Gmail",
-    auth: {
-        user: "",
-        pass: ""
-    }
-});
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: false
+}));
 
 app.use(express.static(__dirname + '/public'));
 app.use('/bower_components',  express.static(__dirname + '/bower_components'));
@@ -18,23 +17,30 @@ app.get('/', function(req, res) {
   res.sendFile(process.cwd() + "/index.html");
 });
 
-app.post('/send',function(req, res) {
-    var mailOptions={
-        from : req.query.from,
-        to : 'cdonofrio20@gmail.com',
-        subject : req.query.subject,
-        text : req.query.text
+app.post('/send', function(req, res) {
+  var auth = {
+    auth: {
+      api_key: 'pubkey-6d3335421e9185b591bfa8b623cd59df',
+      domain: 'mg.chrisdonofrio.xyz'
     }
-    console.log(mailOptions);
-    smtpTransport.sendMail(mailOptions, function(error, response){
-     if(error){
-            console.log(error);
-        res.end("error");
-     }else{
-            console.log("Message sent: " + response.message);
-        res.end("sent");
-         }
-});
+  }
+
+  var nodemailerMailgun = nodemailer.createTransport(mg(auth));
+
+  nodemailerMailgun.sendMail({
+    from: 'Chris Donofrio <cdonofrio20@gmail.com>', // sender address
+    to: 'cdonofrio20@gmail.com', // list of receivers
+    subject: 'Website submission', // Subject line
+    text: 'You have a submission with the following details... Name: '+req.body.name+' Email: '+req.body.email+' Message: '+req.body.message, // plaintext body
+    html: '<p>You have a submission with the following details...</p><ul><li>Name: '+req.body.name+'</li><li>Email: '+req.body.email+'</li><li>Message: '+req.body.message+'</li></ul>' // html body
+  }, function (err, info) {
+    if (err) {
+      console.log('Error: ' + err);
+    }
+    else {
+      console.log('Response: ' + info);
+    }
+  });
 });
 
 app.listen(PORT, function() {
