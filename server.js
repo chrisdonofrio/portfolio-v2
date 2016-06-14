@@ -20,8 +20,8 @@ app.get('/', function(req, res) {
 app.post('/send', function(req, res) {
   var auth = {
     auth: {
-      api_key: 'pubkey-6d3335421e9185b591bfa8b623cd59df',
-      domain: 'mg.chrisdonofrio.xyz'
+      api_key: 'key-0481053a520dee442223c5eb21e4411f',
+      domain: 'chrisdonofrio.xyz'
     }
   }
 
