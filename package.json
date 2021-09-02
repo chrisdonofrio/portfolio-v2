@@ -11,8 +11,5 @@
   "dependencies": {
     "body-parser": "^1.15.1",
     "express": "^4.13.4",
-    "nodemailer": "^6.4.16",
-    "nodemailer-mailgun-transport": "git+https://github.com/orliesaurus/nodemailer-mailgun-transport.git",
-    "nodemailer-smtp-transport": "^2.5.0"
   }
 }
